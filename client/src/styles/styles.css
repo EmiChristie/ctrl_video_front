@@ -1,0 +1,307 @@
+.background {
+    position: relative;
+    background: #E2986A;
+    background: linear-gradient(
+      90deg,
+      rgba(226, 152, 106, 1) 0%,
+      rgba(235, 99, 112, 1) 18%,
+      rgba(128, 60, 139, 1) 75%,
+      rgba(93, 47, 148, 1) 100%
+    );
+    overflow: hidden;
+  }
+  
+  .background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 9, 70, 0.3);
+    pointer-events: none;
+  }
+
+
+.button-85 {
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #2F3747;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #F57AC2,
+    #859DFF,
+    #F57AC2
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2F3747;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.button-75 {
+  align-items: center;
+  background-image: linear-gradient(135deg, #859DFF 10%, #F57AC2);
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: "Codec cold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all 200ms;
+}
+
+.button-75:active {
+  outline: 0;
+}
+
+.button-75:hover {
+  outline: 0;
+  transform: scale(.9);
+}
+
+.button-75 span {
+  transition: all 200ms;
+}
+
+.button-75:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+
+@media screen and (max-width: 991px) {
+  .button-75 {
+    font-size: 15px;
+    height: 50px;
+  }
+
+  .button-75 span {
+    line-height: 50px;
+  }
+}
+
+
+.button-95 {
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #2F3747;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-95:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #F57AC2,
+    #859DFF,
+    #F57AC2
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(3px);
+  -webkit-filter: blur(2px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-95 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-95 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-95:hover {
+  outline: 0;
+  transform: scale(.9);
+}
+
+.button-95 span {
+  transition: all 200ms;
+}
+
+.button-95:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+/* ====== CONTAINER TV ANTIGA ====== */
+.body {
+  position: relative;
+  padding: 2vw;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #111;
+
+  /* Scanlines */
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.02) 0px,
+      rgba(0,0,0,0.25) 2px,
+      rgba(0,0,0,0.35) 4px
+    );
+}
+
+/* Vinheta + curvatura */
+.body::after {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  pointer-events: none;
+  z-index: 3;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,0) 40%,
+      rgba(0,0,0,0.45) 65%,
+      rgba(0,0,0,0.95) 100%
+    );
+
+  transform: scale(1.05);
+}
+
+/* Flicker + ruído */
+.body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.03),
+      rgba(0,0,0,0.03)
+    );
+
+  animation: crtFlicker 0.12s infinite;
+  mix-blend-mode: overlay;
+}
+
+/* ====== TEXTO CRT ====== */
+.title {
+  position: relative;
+  z-index: 5;
+
+  font-size: calc(20px + 18vh);
+  line-height: calc(20px + 20vh);
+  color: #f2cde0;
+  text-shadow:
+      0 0 3px #d88bb8,
+      0 0 6px #F57AC2,
+      0 0 10px #da75af,
+      0 0 25px #414b77,
+      0 0 80px #0a1025;
+
+  animation: blink 12s infinite, chromaShift 3s infinite;
+}
+
+/* ====== BLINK / FLICKER DO TEXTO ====== */
+@keyframes blink {
+  20%, 24%, 55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    color: #ffe6f2;
+    text-shadow:
+      0 0 3px #d88bb8,
+      0 0 6px #F57AC2,
+      0 0 10px #da75af,
+      0 0 25px #414b77,
+      0 0 80px #0a1025;
+  }
+}
+
+/* ====== ABERRAÇÃO CROMÁTICA ====== */
+@keyframes chromaShift {
+  0% { filter: drop-shadow(-2px 0 #F57AC2) drop-shadow(2px 0 #859DFF); }
+  50% { filter: drop-shadow(2px 0 #F57AC2) drop-shadow(-2px 0 #859DFF); }
+  100% { filter: drop-shadow(-2px 0 #F57AC2) drop-shadow(2px 0 #859DFF); }
+}
+
+/* ====== FLICKER GLOBAL CRT ====== */
+@keyframes crtFlicker {
+  0% { opacity: 0.15; }
+  50% { opacity: 0.05; }
+  100% { opacity: 0.15; }
+}
