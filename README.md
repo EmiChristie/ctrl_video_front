@@ -6,7 +6,7 @@ Ctrl+Video is a lightweight video downloader that runs locally in your browser, 
 
 The project uses yt-dlp as its only back-end dependency to handle video downloads.
 
-Look into [Ctrl+Video's back-end Repo]() for the back-end code.
+Look into [Ctrl+Video's back-end Repo](https://github.com/EmiChristie/ctrl_video_back) for the back-end code.
 
 ### Features
 
