@@ -137,13 +137,46 @@
   }
 }
 
+.button-105{
+  .button-95 {
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #2F3747;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+}
+
+.button-105:before{
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ac5990d5
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(3px);
+  -webkit-filter: blur(2px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-95 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
 
 .button-95 {
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
   background: #2F3747;
-  cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
@@ -186,9 +219,10 @@
   }
 }
 
-.button-95:hover {
+.enabled-button:hover {
   outline: 0;
   transform: scale(.9);
+  cursor: pointer;
 }
 
 .button-95 span {
@@ -199,7 +233,7 @@
   transform: scale(.9);
   opacity: .75;
 }
-/* ====== CONTAINER TV ANTIGA ====== */
+
 .body {
   position: relative;
   padding: 2vw;
@@ -209,7 +243,7 @@
   overflow: hidden;
   background: #111;
 
-  /* Scanlines */
+  
   background-image:
     repeating-linear-gradient(
       to bottom,
@@ -219,7 +253,7 @@
     );
 }
 
-/* Vinheta + curvatura */
+
 .body::after {
   content: "";
   position: absolute;
@@ -238,7 +272,7 @@
   transform: scale(1.05);
 }
 
-/* Flicker + ruído */
+
 .body::before {
   content: "";
   position: absolute;
@@ -256,7 +290,7 @@
   mix-blend-mode: overlay;
 }
 
-/* ====== TEXTO CRT ====== */
+
 .title {
   position: relative;
   z-index: 5;
@@ -274,7 +308,7 @@
   animation: blink 12s infinite, chromaShift 3s infinite;
 }
 
-/* ====== BLINK / FLICKER DO TEXTO ====== */
+
 @keyframes blink {
   20%, 24%, 55% {
     color: #111;
@@ -292,14 +326,14 @@
   }
 }
 
-/* ====== ABERRAÇÃO CROMÁTICA ====== */
+
 @keyframes chromaShift {
   0% { filter: drop-shadow(-2px 0 #F57AC2) drop-shadow(2px 0 #859DFF); }
   50% { filter: drop-shadow(2px 0 #F57AC2) drop-shadow(-2px 0 #859DFF); }
   100% { filter: drop-shadow(-2px 0 #F57AC2) drop-shadow(2px 0 #859DFF); }
 }
 
-/* ====== FLICKER GLOBAL CRT ====== */
+
 @keyframes crtFlicker {
   0% { opacity: 0.15; }
   50% { opacity: 0.05; }

@@ -1,4 +1,4 @@
-import { AbsoluteCenter, Box, Center, Span, Text } from "@chakra-ui/react"
+import { Box, Span, Text } from "@chakra-ui/react"
 import DownloadForm from "./components/DownloadForm"
 
 function App() {
