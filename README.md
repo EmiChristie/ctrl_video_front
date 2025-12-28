@@ -2,6 +2,8 @@
 
 A simple, local, and privacy-focused video downloader.
 
+![Ctrl+Video's visuals](/client/public/screen.png)
+
 Ctrl+Video is a lightweight video downloader that runs locally in your browser, providing a clean and easy-to-use interface for downloading videos. Unlike online downloader websites, Ctrl+Video does not rely on external servers, does not collect any user data, and gives you full control over the download process.
 
 The project uses yt-dlp as its only back-end dependency to handle video downloads.
